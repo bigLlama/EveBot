@@ -4,11 +4,11 @@ from discord import app_commands
 import random
 
 
-class santaTracker(commands.Cog):
+class SantaTracker(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @app_commands.command(name='santatracker', description="Track Santa's last known location")
+    @app_commands.command(name='santa-tracker', description="Track Santa's last known location")
     async def santatracker(self, interaction: discord.Interaction):
 
         locations = [
@@ -30,4 +30,4 @@ class santaTracker(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(santaTracker(bot))
+    await bot.add_cog(SantaTracker(bot))
