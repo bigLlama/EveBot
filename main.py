@@ -35,24 +35,5 @@ async def main():
         await bot.start(TOKEN)
 
 
-@app_commands.command(name='santatracker', description="Track Santa's last known location")
-async def santatracker(ctx):
-    locations = [
-        'the North Pole',
-        'a snowy village',
-        'a cozy fireplace',
-        'a twinkling Christmas tree',
-        'a busy toy workshop',
-    ]
-    last_known_location = random.choice(locations)
-
-    embed = discord.Embed(
-        color=0xffcc00,
-        title='🎅 Santa Tracker 🎅',
-        description=f'Santa was last spotted at {last_known_location}.',
-    )
-
-    await ctx.send(embed=embed)
-
 
 asyncio.run(main())

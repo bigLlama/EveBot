@@ -21,7 +21,7 @@ class SantaTracker(commands.Cog):
         last_known_location = random.choice(locations)
 
         embed = discord.Embed(
-            color=0xffcc00,  # Gold color
+            color=0xffcc00,
             title='🎅 Santa Tracker 🎅',
             description=f'Santa was last spotted at {last_known_location}.',
         )
