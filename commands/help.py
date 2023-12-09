@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
+from discord.ext.commands import CommandError
 from discord import app_commands
-import random
 
 
 class Help(commands.Cog):
@@ -12,13 +12,20 @@ class Help(commands.Cog):
     async def help(self, interaction: discord.Interaction):
 
         embed = discord.Embed(
-            title="Help",
+            title="Hi, I'm Eve...Christmas Eve ⛄",
             description="""
-                
+            **Basic Commands**
+            `/christmas-countdown: `Display the countdown until Christmas
+            `/letter-to-santa: `Send a letter to Santa
+            `/mistletoe: `A mistletoe will appear above two lucky users
+            `/santa-tracker` Track Santa's last known location\n
+            **Gifts**
+            `/gift @user: `Send a virtual gift to a user
+            `/top-received` Show the top 10 users with the most gifts received in the server
+            `/top-sent` Show the top 10 users with the most gifts sent in the server
             
-            
-            
-            """
+            """,
+            color=0x3498db  # You can set the color to whatever you prefer
         )
 
 
